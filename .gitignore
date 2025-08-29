@@ -2,6 +2,7 @@
 Makefile
 /.node_modules
 DB+Relationships+SQL+Joins+Backend+Engineering+with+Go.jpg
+/bin
 
 # Logs
 logs
