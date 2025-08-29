@@ -1,7 +1,7 @@
 .envrc
 Makefile
 /.node_modules
-/docs
+DB+Relationships+SQL+Joins+Backend+Engineering+with+Go.jpg
 
 # Logs
 logs
