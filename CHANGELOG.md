@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.0](https://github.com/marcosvdn7/gopher-social/compare/v1.0.0...v1.1.0) (2025-08-30)
+
+
+### Features
+
+* dockerfile ([0fa31b0](https://github.com/marcosvdn7/gopher-social/commit/0fa31b0e88063af172e0e9b2bc489007553aeaf3))
+* dockerfile ([e96e189](https://github.com/marcosvdn7/gopher-social/commit/e96e1897dd35fdfa335ff140eab92e312410da90))
+* update api version automatically ([d575af4](https://github.com/marcosvdn7/gopher-social/commit/d575af4406616dd013d8cffec2cbc1829ed591e8))
+
 ## 1.0.0 (2025-08-30)
 
 
