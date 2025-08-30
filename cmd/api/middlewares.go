@@ -10,7 +10,6 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/go-chi/cors"
 	"github.com/go-redis/redis/v8"
 	"github.com/golang-jwt/jwt/v5"
 )
@@ -27,17 +26,6 @@ type userCtx string
 var (
 	userCtxKey userCtx = "userCtx"
 )
-
-func corsMiddleware(h http.Handler) func(http.Handler) http.Handler {
-	return cors.Handler(cors.Options{
-		AllowedOrigins:   []string{"https://*", "http://*"},
-		AllowedMethods:   []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-		AllowedHeaders:   []string{"Accept", "Authorization", "Content-Type", "X-CSRF-Token"},
-		ExposedHeaders:   []string{"Link"},
-		AllowCredentials: false,
-		MaxAge:           300,
-	})
-}
 
 func (app *application) basicAuthMiddleware() func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
