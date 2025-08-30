@@ -1,6 +1,7 @@
 package ratelimiter
 
 import (
+	"fmt"
 	"sync"
 	"time"
 )
@@ -27,6 +28,7 @@ func (f *FixedRateWindowLimiter) Allow(ip string) (bool, time.Duration) {
 
 	if !exists || count < f.limit {
 		f.RLock()
+		fmt.Println("entrou aqui")
 		if !exists {
 			go f.resetCount(ip)
 		}

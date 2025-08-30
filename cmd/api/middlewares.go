@@ -172,6 +172,7 @@ func (app *application) getUser(ctx context.Context, userID int64) (store.User, 
 
 func (app *application) RateLimiterMiddleware(next http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		fmt.Println(app.config.rateLimiter.Enabled)
 		if app.config.rateLimiter.Enabled {
 			if allow, retryAfter := app.rateLimiter.Allow(r.RemoteAddr); !allow {
 				fmt.Println("entrou aqui")
